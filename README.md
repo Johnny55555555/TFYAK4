@@ -181,13 +181,13 @@ hello_world
 
 **Задание №1**
 
-<img src="Скриншоты/Фото .png" width="700">
+<img src="1.png" width="700">
 **Задание №2**
 
-<img src="Скриншоты/Фото .png" width="700">
+<img src="2.png" width="700">
 **Задание №3**
 
-<img src="Скриншоты/Фото .png" width="700">
+<img src="3.png" width="700">
 
 ---
 
