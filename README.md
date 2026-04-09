@@ -176,7 +176,7 @@ hello_world
 
 
 
-<img src="4.png" width="700">
+<img src="5.png" width="700">
 
 **Принцип работы:**
 
