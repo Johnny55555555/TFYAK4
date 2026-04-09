@@ -178,13 +178,13 @@ namespace ТФЯК__1
 
                     switch (state)
                     {
-                        case 0: // первый символ часа
+                        case 0: 
                             if (c == '0' || c == '1') state = 1;
                             else if (c == '1' && j + 1 < text.Length && text[j + 1] == '2') state = 1;
                             else goto NextChar;
                             break;
 
-                        case 1: // второй символ часа
+                        case 1: 
                             if (char.IsDigit(c))
                             {
                                 string hourStr = text.Substring(i, 2);
@@ -195,17 +195,17 @@ namespace ТФЯК__1
                             else goto NextChar;
                             break;
 
-                        case 2: // двоеточие
+                        case 2:
                             if (c == ':') state = 3;
                             else goto NextChar;
                             break;
 
-                        case 3: // первая цифра минут
+                        case 3: 
                             if (c >= '0' && c <= '5') state = 4;
                             else goto NextChar;
                             break;
 
-                        case 4: // вторая цифра минут
+                        case 4: 
                             if (c >= '0' && c <= '9')
                             {
                                 string minuteStr = text.Substring(j - 1, 2);
@@ -216,20 +216,19 @@ namespace ТФЯК__1
                             else goto NextChar;
                             break;
 
-                        case 5: // пробел перед AM/PM
+                        case 5: 
                             if (c == ' ') state = 6;
                             else goto NextChar;
                             break;
 
-                        case 6: // A/P
+                        case 6:
                             if (c == 'A' || c == 'a' || c == 'P' || c == 'p') state = 7;
                             else goto NextChar;
                             break;
 
-                        case 7: // M
+                        case 7: 
                             if (c == 'M' || c == 'm')
                             {
-                                // Проверка особого случая 12:00
                                 string timeStr = text.Substring(startIndex, j - startIndex + 1);
                                 string[] parts = timeStr.Split(new char[] { ':', ' ' }, StringSplitOptions.RemoveEmptyEntries);
                                 int hour = int.Parse(parts[0]);
